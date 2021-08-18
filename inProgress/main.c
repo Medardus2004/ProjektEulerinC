@@ -1,7 +1,10 @@
 #include<stdio.h>
 
-int main() {
-	printf("Hello\n");
-	return 0;
-	######### this is just a comment
+void main() {
+	
+	
+	for(int i = 1; i++; i <10)
+	printf(" %i ", i);
+	
+	
 }	
