@@ -1,0 +1,5 @@
+Can be calculated:
+(Number of Steps)! / (Identical Steps)! ^ Number of choices
+
+In this case 
+40!/20!² = 137846528820
