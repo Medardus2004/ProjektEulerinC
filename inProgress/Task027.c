@@ -27,7 +27,6 @@ bool primechecker(int number)
 void main() 
 	{	
 	
-	int to_examine = 0;
 	int maximum_of_primes = 0;
 	int n;
 	int counter = 0;
@@ -35,31 +34,28 @@ void main()
 	int superb;
 
 	for(int a = -999; a < 1000; a ++)
-        {
-		for(int b = -999; b <= 1000; b ++)
         	{
-			n = 0;
-			while(primechecker(n*n + a*n +b))
-			{
-				if (a == -61 && b == 971)
+		for(int b = -999; b <= 1000; b ++)
+        		{
+				n = 0;
+				
+				while(primechecker(n*n + a*n +b))
 				{
-					printf("%i : %i \n",counter, n*n + a*n +b);
+			        	counter++;		
+					n++;
 				}
-			        counter++;		
-				n++;
+				
+				if(counter > maximum_of_primes)
+				{
+					maximum_of_primes = counter; 
+					supera = a;
+					superb = b;
+				}
+				
+				counter = 0;
 			}
-			if(counter > maximum_of_primes)
-			{
-				maximum_of_primes = counter; 
-				supera = a;
-				superb = b;
-			}
-			counter = 0;
-		}
-//		printf("a = %i  ", a);
-	}
-	
+		}	
 	printf("a = %i und b = %i \n Es ergeben sich %i Primzahlen", supera, superb, maximum_of_primes);
-}
+	}
 
 
