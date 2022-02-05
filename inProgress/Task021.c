@@ -3,15 +3,15 @@
 void main () {
 	int sum = 0;
 	int number = 100;
-	int sizeofarray = 290;
-	int globalarrayfield[sizeofarray+1];
+	int sizeofarray = 40000;
+	int globalarrayfield[sizeofarray];
 
-	for(int i = 0; i < sizeofarray+1; i++)
+	for(int i = 0; i < sizeofarray; i++)
 	{
 		globalarrayfield[i] = 0;
 	}
 
-	for(int j = 1; j < sizeofarray+1; j++)
+	for(int j = 1; j < sizeofarray; j++)
 	{
 		for(int i = 1; i < j ;i++)
 		{
@@ -22,15 +22,15 @@ void main () {
 		}
 	}	
 
-	for(int counter = 1; counter < sizeofarray; counter++)
+	for(int counter = 1; counter < 10000; counter++)
 	{
-		if(counter == globalarrayfield[globalarrayfield[counter]])
+		if(counter == globalarrayfield[globalarrayfield[counter]] && counter != globalarrayfield[counter]  )
 		{
 			printf("%i \n", counter);
+			sum += counter;
 		}	
 	}	
+	printf(" The sum of all amicable numbers under 10000 %i", sum);
+
+
 }
-
-
-
-
